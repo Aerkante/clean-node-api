@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  clean-node-api-mongo:
+    image: mongo
+    container_name: clean-node-api-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user-access
+      MONGO_INITDB_ROOT_PASSWORD: user-pass-123
+      MONGO_INITDB_DATABASE: CleanApiMongo
+    volumes:
+      - "./mongodb:/data/database"
+    ports:
+      - "27040:27017"
