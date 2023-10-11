@@ -5,7 +5,6 @@ module.exports = {
         "es2021": true
     },
     "extends": [
-        "standard-with-typescript",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
@@ -24,7 +23,7 @@ module.exports = {
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": ["./tsconfig.json"]
     },
     "plugins": [
         "@typescript-eslint"
